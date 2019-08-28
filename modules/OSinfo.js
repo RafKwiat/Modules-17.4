@@ -1,5 +1,5 @@
 var os = require('os');
-var timeTransform = require('./timeFormat');
+var times = require('./timeFormat');
 
 function getOSinfo() {
         var type = os.type();
@@ -21,4 +21,21 @@ function getOSinfo() {
         console.log('Home dir: ', userInfo.homedir);    
 }
 exports.print = getOSinfo;
-timeFormat.print();
+
+//TIME CONVERTER
+
+process.stdin.setEncoding('utf-8');
+process.stdin.on('readable', function() {
+    var input = process.stdin.read();
+    if (input >= 0 || input !== null) {
+        
+        switch(input) {
+            case '/exit':
+                process.stdout.write('Quiting app!\n');
+                process.exit();
+                break;
+            default:
+                process.stderr.write('Wrong instruction\n');  
+        };
+    }
+times.timeConvert();

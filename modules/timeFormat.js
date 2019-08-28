@@ -10,5 +10,5 @@ function timeConvert(sek) {
         return num + " sekund = " + rHours + " godz. " + rMinutes + " min. " + seconds + " sek.";
 }
 
-module.exports = timeConvert;
+exports = timeConvert;
 
