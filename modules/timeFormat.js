@@ -7,4 +7,4 @@ function timeConvert(sek) {
         var seconds = Math.round((minutes - rMinutes) * 60);
         return rHours + " godz. " + rMinutes + " min. " + seconds + " sek.";
 }
-exports.timeConvert = convertedTime;
+exports.timeConvert = timeConvert;
