@@ -12,7 +12,7 @@ function getOSinfo() {
         var release = os.release();
         var cpu = os.cpus()[0].model;
         var uptime = os.uptime();
-        var convertedTime = timeConvert(uptime);
+        var convertedTime = times.timeConvert(uptime);
         var userInfo = os.userInfo(); 
         console.log('System: ', type);
         console.log('Release: ', release);
