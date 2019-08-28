@@ -1,5 +1,5 @@
 var os = require('os');
-var times = require('./timeFormat');
+var timeFormater = require('./timeFormat');
 
 function getOSinfo() {
         var type = os.type();
@@ -12,8 +12,9 @@ function getOSinfo() {
         var release = os.release();
         var cpu = os.cpus()[0].model;
         var uptime = os.uptime();
-        var convertedTime = times.timeConvert(uptime);
+        var convertedTime = timeFormater.timeConvert(uptime);
         var userInfo = os.userInfo(); 
+    
         console.log('System: ', type);
         console.log('Release: ', release);
         console.log('CPU model: ', cpu);
