@@ -1,5 +1,3 @@
-
-
 function timeConvert(sek) {
         var num = sek;
         var hours = (num / 3600);
@@ -9,6 +7,4 @@ function timeConvert(sek) {
         var seconds = Math.round((minutes - rMinutes) * 60);
         return num + " sekund = " + rHours + " godz. " + rMinutes + " min. " + seconds + " sek.";
 }
-
-exports = timeConvert;
-
+exports.timeConvert = timeConvert;

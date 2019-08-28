@@ -16,26 +16,10 @@ function getOSinfo() {
         console.log('System: ', type);
         console.log('Release: ', release);
         console.log('CPU model: ', cpu);
-        console.log('Uptime:~ ', (uptime / 60).toFixed(0), 'min');
+        console.log('Uptime:~ ', (uptime / 60).toFixed(0), 'min', times.timeConvert(sek));
         console.log('User name: ', userInfo.username);
-        console.log('Home dir: ', userInfo.homedir);    
-}
-exports.print = getOSinfo;
-
-//TIME CONVERTER
-
-process.stdin.setEncoding('utf-8');
-process.stdin.on('readable', function() {
-    var input = process.stdin.read();
-    if (input >= 0 || input !== null) {
+        console.log('Home dir: ', userInfo.homedir);
         
-        switch(input) {
-            case '/exit':
-                process.stdout.write('Quiting app!\n');
-                process.exit();
-                break;
-            default:
-                process.stderr.write('Wrong instruction\n');  
-        };
-    }
-times.timeConvert();
+}
+
+exports.print = getOSinfo;
