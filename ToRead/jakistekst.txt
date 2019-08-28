@@ -1,0 +1,3 @@
+﻿Lorem ipsum dolor sit amet
+A tak wyglądają dane po zapisie
+ A tak wyglądają dane po zapisie
